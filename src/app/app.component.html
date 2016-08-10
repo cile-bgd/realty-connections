@@ -1,3 +1,23 @@
 <h1>
   {{title}}
 </h1>
+<button md-raised-button color="primary">this is a magical button</button>
+<button md-raised-button color="accent"><md-icon>home</md-icon></button>
+<md-card>basic card</md-card>
+
+<h2>grid-list example</h2>
+  <md-grid-list cols="4" [style.background]="lightblue">
+    <md-grid-tile>One</md-grid-tile>
+    <md-grid-tile>Two</md-grid-tile>
+    <md-grid-tile>Three</md-grid-tile>
+    <md-grid-tile>Four</md-grid-tile>
+</md-grid-list>
+
+<md-input placeholder="Character count (100 max)" maxLength="100" class="demo-full-width" value="Hello world. How are you?" #characterCountHintExample>
+  <md-hint align="end">{{characterCountHintExample.characterCount}} / 100</md-hint>
+</md-input>
+
+<md-radio-group>
+  <md-radio-button value="option_1">1</md-radio-button>
+  <md-radio-button value="option_2">2</md-radio-button>
+</md-radio-group>
