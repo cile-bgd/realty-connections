@@ -1,23 +1,38 @@
-<h1>
-  {{title}}
-</h1>
-<button md-raised-button color="primary">this is a magical button</button>
-<button md-raised-button color="accent"><md-icon>home</md-icon></button>
-<md-card>basic card</md-card>
+<div layout flex>
 
-<h2>grid-list example</h2>
-  <md-grid-list cols="4" [style.background]="lightblue">
-    <md-grid-tile>One</md-grid-tile>
-    <md-grid-tile>Two</md-grid-tile>
-    <md-grid-tile>Three</md-grid-tile>
-    <md-grid-tile>Four</md-grid-tile>
-</md-grid-list>
+  <md-toolbar color="primary">
+    <md-icon>menu</md-icon>
+    <span>{{title}}</span>
 
-<md-input placeholder="Character count (100 max)" maxLength="100" class="demo-full-width" value="Hello world. How are you?" #characterCountHintExample>
-  <md-hint align="end">{{characterCountHintExample.characterCount}} / 100</md-hint>
-</md-input>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
 
-<md-radio-group>
-  <md-radio-button value="option_1">1</md-radio-button>
-  <md-radio-button value="option_2">2</md-radio-button>
-</md-radio-group>
+    <span>Right Aligned Text</span>
+  </md-toolbar>
+
+  <div layout="row"><h1>{{title}}</h1></div>
+
+  <md-card>
+    <md-card-title>Create profile</md-card-title>
+      <md-card-content>
+        <form>
+          <md-input placeholder="First Name"></md-input>
+          <md-input placeholder="Last Name"></md-input>
+          <md-input placeholder="Email"></md-input>
+          <md-input placeholder="Favorite toy"></md-input>
+          <md-input placeholder="Description"></md-input>
+          <md-radio-group>
+            <md-radio-button value="Looking for love">Looking for love</md-radio-button>
+            <md-radio-button value="Just browsing">Just browsing</md-radio-button>
+          </md-radio-group>
+          <div>
+            <md-checkbox indeterminate="true">Is a good dog</md-checkbox>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions align="end">
+        <button md-button color="accent">POST</button>
+      </md-card-actions>
+  </md-card>
+
+</div>

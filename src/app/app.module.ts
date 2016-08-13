@@ -17,20 +17,21 @@ import { MdIconModule } from '@angular2-material/icon';
 @NgModule({
     declarations: [AppComponent],
     imports: [
-        BrowserModule, 
+        BrowserModule,
         // Router
         //RouterModule.forRoot(config), 
         // Forms
-        FormsModule, 
+        FormsModule,
         // Material Design
         MdCoreModule,
-        MdSidenavModule, 
-        MdButtonModule, 
-        MdToolbarModule, 
-        MdCardModule, 
+        MdSidenavModule,
+        MdButtonModule,
+        MdToolbarModule,
+        MdCardModule,
         MdInputModule,
         MdRadioModule,
-        MdIconModule
+        MdIconModule,
+        MdCheckboxModule
     ],
 
     bootstrap:    [AppComponent],
